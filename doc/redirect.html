@@ -1,0 +1,38 @@
+<html><head><title>Epydoc Redirect Page</title>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="pragma" content="no-cache" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+var pages = ["usufy.wrappers.dailymotion.Dailymotion-c", "usufy.wrappers.foursquare.Foursquare-c", "usufy.wrappers.googleplus.GooglePlus-c", "usufy.wrappers.karmacracy.Karmacracy-c", "usufy.wrappers.slideshare.Slideshare-c", "usufy.wrappers.delicious.Delicious-c", "usufy.wrappers.instagram.Instagram-c", "usufy.wrappers.pinterest.Pinterest-c", "usufy.wrappers.platforms.Platform-c", "usufy.wrappers.facebook.Facebook-c", "usufy.wrappers.pastebin.Pastebin-c", "usufy.wrappers.myspace.Myspace-c", "usufy.wrappers.twitter.Twitter-c", "usufy.wrappers.youtube.Youtube-c", "usufy.wrappers.douban.Douban-c", "usufy.wrappers.github.Github-c", "usufy.wrappers.scribd.Scribd-c", "usufy.wrappers.tumblr.Tumblr-c", "usufy.wrappers.dailymotion-m", "usufy.wrappers.badoo.Badoo-c", "usufy.wrappers.klout.Klout-c", "usufy.wrappers.foursquare-m", "usufy.wrappers.googleplus-m", "usufy.wrappers.karmacracy-m", "usufy.wrappers.slideshare-m", "usufy.wrappers.delicious-m", "usufy.wrappers.instagram-m", "usufy.wrappers.pinterest-m", "usufy.wrappers.platforms-m", "usufy.wrappers.blip.Blip-c", "usufy.wrappers.ebay.Ebay-c", "usufy.wrappers.facebook-m", "usufy.wrappers.pastebin-m", "usufy.wrappers.myspace-m", "usufy.wrappers.twitter-m", "usufy.wrappers.youtube-m", "usufy.wrappers.hi5.Hi5-c", "usufy.wrappers.douban-m", "usufy.wrappers.github-m", "usufy.wrappers.scribd-m", "usufy.wrappers.tumblr-m", "usufy.wrappers.badoo-m", "usufy.wrappers.klout-m", "usufy.wrappers.qq.QQ-c", "usufy.wrappers.vk.Vk-c", "usufy.wrappers.blip-m", "usufy.wrappers.ebay-m", "usufy.config_usufy-m", "usufy.wrappers.hi5-m", "usufy.wrappers.qq-m", "usufy.wrappers.vk-m", "usufy.wrappers-m", "usufy.usufy-m", "usufy-m"];
+var dottedName = get_anchor();
+if (dottedName) {
+    var target = redirect_url(dottedName);
+    if (target) window.location.replace(target);
+}
+// -->
+</script>
+
+<h3>Epydoc Auto-redirect page</h3>
+
+<p>When javascript is enabled, this page will redirect URLs of
+the form <tt>redirect.html#<i>dotted.name</i></tt> to the
+documentation for the object with the given fully-qualified
+dotted name.</p>
+<p><a id="message"> &nbsp; </a></p>
+
+<script type="text/javascript">
+<!--
+if (dottedName) {
+    var msg = document.getElementById("message");
+    msg.innerHTML = "No documentation found for <tt>"+
+                    dottedName+"</tt>";
+}
+// -->
+</script>
+
+</body>
+</html>

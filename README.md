@@ -102,12 +102,23 @@ Installation:
 =============
 The installation under Python 2.7 is as follows:
 ```
-python setup.py build
-python setup.py install
+tar xvfz Usufy-v1.0.0.tar.gz
+sudo python setup.py install
 ```
+or
+```
+unzip USufy-v1.0.0.zip
+sudo python setup.py install
+```
+Now the module can be imported from any python code.
 
 Usage:
 ======
+So as to run the program, navigate to Usufy-v1.0.0/usufy and run:
+```
+python usage.py -h
+```
+The usage is described as follows:
 ```
 usage: usufy.py
                 (--info <action> | -l <path_to_nick_list> | -n <nick> [<nick> ...])

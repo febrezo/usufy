@@ -34,7 +34,7 @@ class Badoo(Platform):
 		self.tags = ["social", "contact"]
 		self.NICK_WILDCARD = "<HERE_GOES_THE_NICK>"
 		# Add the URL below
-		self.url = "http://badoo.com/" + self.NICK_WILDCARD
+		self.url = "http://es.badoo.com/" + self.NICK_WILDCARD
 		# Add the strings to look for when an error appears
 		#self.notFoundText = ["Con más de 215 millones de usuarios,", "Potencia tu vida social, no tu red social"]
 		self.notFoundText = ["<title>Haz Contactos Nuevos en Badoo"]

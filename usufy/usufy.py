@@ -28,7 +28,11 @@ __author__ = "Felix Brezo, Yaiza Rubio "
 __copyright__ = "Copyright 2014, i3visio"
 __credits__ = ["Felix Brezo", "Yaiza Rubio"]
 __license__ = "GPLv3"
+<<<<<<< HEAD
+__version__ = "v1.0.2"
+=======
 __version__ = "v1.0.1"
+>>>>>>> 56d9942364eb8bb47e7386b3f0207566667b33c3
 __maintainer__ = "Felix Brezo"
 __email__ = "contacto@i3visio.com"
 
@@ -234,9 +238,12 @@ if __name__ == "__main__":
 			# Generating summary files for each ...
 			if args.extension:
 				# Storing the file...
-				# Verifying if the outputPath exists
-				if not os.path.exists (args.output_folder):
-					os.makedirs(args.output_folder)
+				if not args.output_folder:
+					args.output_folder = "./"
+				else:
+					# Verifying if the outputPath exists
+					if not os.path.exists (args.output_folder):
+						os.makedirs(args.output_folder)
 				if  "csv" in args.extension:
 					with open (os.path.join(args.output_folder, "results.csv"), "w") as oF:
 						oF.write( resultsToCSV(res) + "\n" )

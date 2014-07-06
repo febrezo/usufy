@@ -9,7 +9,7 @@ setup(	name="Usufy",
 	license="COPYING",
 	packages=["usufy", "usufy.wrappers"],
 	scripts=["bin/_template.py", "bin/classgenerator.py"],
-	long_description=open('README').read(),
+	long_description=open('README.md').read(),
 #	install_requires=[
 # 	"any >= 1.1.1",
 #	],

@@ -1,11 +1,8 @@
 For more information, check the README.md in http://github.com/i3visio/usufy
 
-<<<<<<< HEAD
 v1.0.2, 2014/07/06 -- Fix on export folder when no folder is provided.
 - From no on, when no -o/--output_folder the program will not crash but store the information in the current folder.
 
-=======
->>>>>>> 56d9942364eb8bb47e7386b3f0207566667b33c3
 v1.0.1, 2014/07/06 -- Fix on export method.
 - Fixing an error when exporting data onto json. The method resultsToJson crashed due to a change in the profiles dictionary.
 

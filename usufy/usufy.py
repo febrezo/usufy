@@ -28,11 +28,7 @@ __author__ = "Felix Brezo, Yaiza Rubio "
 __copyright__ = "Copyright 2014, i3visio"
 __credits__ = ["Felix Brezo", "Yaiza Rubio"]
 __license__ = "GPLv3"
-<<<<<<< HEAD
 __version__ = "v1.0.2"
-=======
-__version__ = "v1.0.1"
->>>>>>> 56d9942364eb8bb47e7386b3f0207566667b33c3
 __maintainer__ = "Felix Brezo"
 __email__ = "contacto@i3visio.com"
 

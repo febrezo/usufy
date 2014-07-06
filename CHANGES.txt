@@ -1,1 +1,7 @@
+For more information, check the README.md in http://github.com/i3visio/usufy
+
+v1.0.1, 2014/07/06 -- Fix on export method.
+- Fixing an error when exporting data onto json. The method resultsToJson crashed due to a change in the profiles dictionary.
+
 v1.0.0, 2014/07/06 -- Initial release.
+

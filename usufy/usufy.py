@@ -1,12 +1,5 @@
 # !/usr/bin/python
 # -*- coding: cp1252 -*-
-
-"""
-usufy.py Copyright (C) F. Brezo and Y. Rubio (i3visio) 2014
-This program comes with ABSOLUTELY NO WARRANTY.
-This is free software, and you are welcome to redistribute it under certain conditions.
-For details, run:
-	python usufy.py --license"""
 #
 ##################################################################################
 #
@@ -24,6 +17,20 @@ For details, run:
 #	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##################################################################################
+""" 
+usufy.py Copyright (C) F. Brezo and Y. Rubio (i3visio) 2014
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+For details, run:
+	python usufy.py --license
+"""
+__author__ = "Felix Brezo, Yaiza Rubio "
+__copyright__ = "Copyright 2014, i3visio"
+__credits__ = ["Felix Brezo", "Yaiza Rubio"]
+__license__ = "GPLv3"
+__version__ = "v1.0.1"
+__maintainer__ = "Felix Brezo"
+__email__ = "contacto@i3visio.com"
 
 import argparse
 import urllib2
@@ -59,7 +66,12 @@ def resultsToJson(profiles):
         """
 	print "Generating .json..."
 	import json
-        jsonText =  json.dumps(profiles)
+	aux = {}
+	for user in profiles.keys():
+		aux[user] = {}
+		for platform in profiles[user].keys():
+			aux[user][str(platform)]  = profiles[user][platform]
+        jsonText =  json.dumps(aux)
         return jsonText
 	
 def getPageWrapper(p, nick, rutaDescarga, avoidProcessing, outQueue=None):

@@ -10,11 +10,7 @@ platforms when a user profile has not been found as the evidence of the existenc
 of a given profile. Its inheritance system has been designed to allow an easy development 
 of new wrappers while its multiprocessing conception shows the results fastly.
 
-<<<<<<< HEAD
 The supported networks in v1.0.2 by 2014-07-06 are:
-=======
-The supported networks in v1.0.1 by 2014-07-06 are:
->>>>>>> 56d9942364eb8bb47e7386b3f0207566667b33c3
 - Badoo
 - Blip
 - Dailymotion
@@ -104,24 +100,14 @@ Project structure:
 
 Installation:
 =============
-<<<<<<< HEAD
 The installation under Python 2.7 for the release package Usufy-v1.0.2 is as follows:
 ```
 tar xvfz Usufy-v1.0.2.tar.gz
-=======
-The installation under Python 2.7 for the release package Usufy-v1.0.1 is as follows:
-```
-tar xvfz Usufy-v1.0.1.tar.gz
->>>>>>> 56d9942364eb8bb47e7386b3f0207566667b33c3
 sudo python setup.py install
 ```
 or
 ```
-<<<<<<< HEAD
-unzip USufy-v1.0.2.zip
-=======
-unzip USufy-v1.0.1.zip
->>>>>>> 56d9942364eb8bb47e7386b3f0207566667b33c3
+unzip Usufy-v1.0.2.zip
 sudo python setup.py install
 ```
 Supeuser privileges are required so as to complete the installation. Afterwards, 
@@ -133,11 +119,7 @@ If no error is displayed, the installation would have been performed correctly.
 
 Usage:
 ======
-<<<<<<< HEAD
 So as to run the program, navigate to Usufy-v1.0.2/usufy and run:
-=======
-So as to run the program, navigate to Usufy-v1.0.1/usufy and run:
->>>>>>> 56d9942364eb8bb47e7386b3f0207566667b33c3
 ```
 python usage.py -h
 ```

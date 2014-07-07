@@ -34,4 +34,4 @@ class Hi5(Platform):
 		self.NICK_WILDCARD = "<HERE_GOES_THE_NICK>"
 		self.url = "http://www.hi5.com/" + self.NICK_WILDCARD
 		self.notFoundText = ["<title>hi5</title>"]
-		self.score= 5.0
+		self.score= 15.0

@@ -38,3 +38,4 @@ class Douban(Platform):
 		# Add the strings to look for when an error appears
 		#self.notFoundText = ["Con más de 215 millones de usuarios,", "Potencia tu vida social, no tu red social"]
 		self.notFoundText = ["http://img3.douban.com/pics/douban_error.gif"]
+		self.score=0.0

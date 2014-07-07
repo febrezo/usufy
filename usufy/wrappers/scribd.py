@@ -34,4 +34,4 @@ class Scribd(Platform):
 		self.NICK_WILDCARD = "<HERE_GOES_THE_NICK>"
 		self.url = "http://es.scribd.com/" + self.NICK_WILDCARD
 		self.notFoundText = ["Oops, page not found"]
-	
+		self.score=5.0	

@@ -38,3 +38,4 @@ class Badoo(Platform):
 		# Add the strings to look for when an error appears
 		#self.notFoundText = ["Con más de 215 millones de usuarios,", "Potencia tu vida social, no tu red social"]
 		self.notFoundText = ["<title>Haz Contactos Nuevos en Badoo"]
+		self.score = 20.0

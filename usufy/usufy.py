@@ -28,7 +28,7 @@ __author__ = "Felix Brezo, Yaiza Rubio "
 __copyright__ = "Copyright 2014, i3visio"
 __credits__ = ["Felix Brezo", "Yaiza Rubio"]
 __license__ = "GPLv3"
-__version__ = "v1.0.2"
+__version__ = "v1.1.0"
 __maintainer__ = "Felix Brezo"
 __email__ = "contacto@i3visio.com"
 
@@ -152,6 +152,48 @@ def processNickList(nicks, platforms=None, rutaDescarga=None, avoidProcessing=Tr
 		res[nick] = profiles
 	return res
 
+def generatingProfiles(nicks):
+	""" 
+		Iterating on the list of nicks to find '.' or "_" and replace them according to:
+			- if '.' in n: 
+				adding n.replace('.', '_')
+				adding n.replace('.', '-')
+				adding n.replace('.', '')
+			- if '_' in n: 
+				adding n.replace('_', '.')
+				adding n.replace('_', '-')
+				adding n.replace('_', '')
+			- if '-' in n: 
+				adding n.replace('-', '.')
+				adding n.replace('-', '_')
+				adding n.replace('-', '')
+		Values returned:
+			a sorted list with the new nicknames.
+	"""
+	listSeparators = ['.', '_', '-']
+	
+	aux = [] 
+	for n in nicks:
+		# Adding the current nick
+		aux.append(n)
+
+		# Initializing candidates list
+		candidates = []
+		
+		# Checking if the nick contains a separator
+		for curSep in listSeparators:
+			if curSep in n:
+				for newSep in listSeparators:
+					candidate = n.replace(curSep, newSep)
+					if candidate not in aux:
+						aux.append(candidate)
+			# trying deleting separator
+			if curSep in n:
+				candidate = n.replace(curSep, '')
+				if candidate not in aux:
+					aux.append(candidate)
+	return sorted(aux)
+	
 if __name__ == "__main__":
 	print "usufy.py Copyright (C) F. Brezo and Y. Rubio (i3visio) 2014"
 	print "This program comes with ABSOLUTELY NO WARRANTY."
@@ -220,6 +262,9 @@ if __name__ == "__main__":
 				except:
 					print "ERROR: there has been an error when opening the file that stores the nicks."
 					print "\tPlease, check the existence of this file."		
+
+			# Iterating to process _ and or .
+			nicks = generatingProfiles(nicks)
 
 			if args.output_folder != None:	
 				# if Verifying an output folder was selected

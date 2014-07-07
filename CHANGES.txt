@@ -1,5 +1,15 @@
 For more information, check the README.md in http://github.com/i3visio/usufy
 
+v1.1.0, 2014/07/07 -- New functionality added: substituting '_' and '.'.
+- Iterating on the list of nicks to find '.' or "_" and replace them according to:
+	if '.' in n: 
+		adding n.replace('.', '_')
+		adding n.replace('.', '')
+	if '_' in n: 
+		adding n.replace('_', '.')
+		adding n.replace('_', '')
+This will help with identifying new accounts.
+		
 v1.0.2, 2014/07/06 -- Fix on export folder when no folder is provided.
 - From no on, when no -o/--output_folder the program will not crash but store the information in the current folder.
 

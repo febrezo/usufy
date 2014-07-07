@@ -10,7 +10,7 @@ platforms when a user profile has not been found as the evidence of the existenc
 of a given profile. Its inheritance system has been designed to allow an easy development 
 of new wrappers while its multiprocessing conception shows the results fastly.
 
-The supported networks in v1.0.2 by 2014-07-06 are:
+The supported networks in v1.1.0 by 2014-07-07 are:
 - Badoo
 - Blip
 - Dailymotion
@@ -100,14 +100,14 @@ Project structure:
 
 Installation:
 =============
-The installation under Python 2.7 for the release package Usufy-v1.0.2 is as follows:
+The installation under Python 2.7 for the release package Usufy-v1.1.0 is as follows:
 ```
-tar xvfz Usufy-v1.0.2.tar.gz
+tar xvfz Usufy-v1.1.0.tar.gz
 sudo python setup.py install
 ```
 or
 ```
-unzip Usufy-v1.0.2.zip
+unzip Usufy-v1.1.0.zip
 sudo python setup.py install
 ```
 Supeuser privileges are required so as to complete the installation. Afterwards, 
@@ -119,7 +119,7 @@ If no error is displayed, the installation would have been performed correctly.
 
 Usage:
 ======
-So as to run the program, navigate to Usufy-v1.0.2/usufy and run:
+So as to run the program, navigate to Usufy-v1.1.0/usufy and run:
 ```
 python usage.py -h
 ```

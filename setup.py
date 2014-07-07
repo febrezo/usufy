@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(	name="Usufy",
-	version="v1.0.2",
+	version="v1.1.0",
 	description="usufy.py - Piece of software to check the existence of a given profile in different platforms.",
 	author="Felix Brezo and Yaiza Rubio",
 	author_email="contacto@i3visio.com",

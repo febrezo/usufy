@@ -11,7 +11,7 @@ except ImportError:
 	read_md = lambda f: open(f, 'r').read()
 
 setup(	name="Usufy",
-	version="v1.1.0",
+	version="v1.2.0",
 	description="usufy.py - Piece of software to check the existence of a given profile in different platforms.",
 	author="Felix Brezo and Yaiza Rubio",
 	author_email="contacto@i3visio.com",

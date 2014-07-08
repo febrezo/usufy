@@ -28,7 +28,7 @@ __author__ = "Felix Brezo, Yaiza Rubio "
 __copyright__ = "Copyright 2014, i3visio"
 __credits__ = ["Felix Brezo", "Yaiza Rubio"]
 __license__ = "GPLv3"
-__version__ = "v1.1.0"
+__version__ = "v1.2.0"
 __maintainer__ = "Felix Brezo"
 __email__ = "contacto@i3visio.com"
 
@@ -157,20 +157,14 @@ def generatingProfiles(nicks):
 		Iterating on the list of nicks to find '.' or "_" and replace them according to:
 			- if '.' in n: 
 				adding n.replace('.', '_')
-				adding n.replace('.', '-')
 				adding n.replace('.', '')
 			- if '_' in n: 
 				adding n.replace('_', '.')
-				adding n.replace('_', '-')
 				adding n.replace('_', '')
-			- if '-' in n: 
-				adding n.replace('-', '.')
-				adding n.replace('-', '_')
-				adding n.replace('-', '')
 		Values returned:
 			a sorted list with the new nicknames.
 	"""
-	listSeparators = ['.', '_', '-']
+	listSeparators = ['.', '_']
 	
 	aux = [] 
 	for n in nicks:
@@ -214,7 +208,7 @@ if __name__ == "__main__":
 
 	# Selecting the platforms where performing the search
 	groupPlatforms = parser.add_argument_group('Platform selection arguments', 'Criteria for selecting the platforms where performing the search.')
-	groupPlatforms.add_argument('-p', '--platforms', metavar='<platform>', choices=['all', 'badoo', 'blip', 'dailymotion', 'delicious', 'douban','ebay', 'facebook', 'foursquare', 'github',  'googleplus', 'hi5', 'instagram', 'karmacracy', 'klout', 'myspace', 'pastebin', 'scribd', 'slideshare', 'pinterest', 'qq', 'tumblr', 'twitter', 'vk', 'youtube'], default = [], nargs='+', required=False, action='store', help='select the platforms where you want to perform the search amongst the following: all, badoo, blip, dailymotion, delicious, douban, ebay, facebook, foursquare, github, googleplus, hi5, instagram, karmacracy, klout, myspace, pastebin, pinterest, qq, scribd, slideshare, tumblr, twitter, vk, youtube. More than one option can be selected.')
+	groupPlatforms.add_argument('-p', '--platforms', metavar='<platform>', choices=['all', 'badoo', 'blip', 'dailymotion',  'douban','ebay', 'facebook', 'flickr',  'foursquare', 'getsatisfaction', 'github',  'googleplus', 'hi5', 'instagram', 'issuu', 'karmacracy', 'klout', 'linkedin', 'myspace', 'pastebin', 'ratemypoo', 'scribd', 'slideshare', 'pinterest', 'pokerstrategy', 'qq', 'tumblr', 'twitter', 'vk', 'youtube'], default = [], nargs='+', required=False, action='store', help='select the platforms where you want to perform the search amongst the following: all, badoo, blip, dailymotion, douban, ebay, facebook, flickr, foursquare, getsatisfaction, github, googleplus, hi5, instagram, issuu, karmacracy, klout, linkedin, myspace, pastebin, pinterest, pokerstrategy, qq, ratemypoo, scribd, slideshare, tumblr, twitter, vk, youtube. More than one option can be selected.')
 	groupPlatforms.add_argument('-t', '--tags', metavar='<tag>', default = [], nargs='+', required=False, action='store', help='select the list of tags that fit the platforms in which you want to perform the search. More than one option can be selected.')
 
 	# Configuring the processing options
@@ -227,7 +221,7 @@ if __name__ == "__main__":
 	groupAbout = parser.add_argument_group('About arguments', 'Showing additional information about this program.')
 	groupAbout.add_argument('-h', '--help', action='help', help='shows the version of the program and exists.')
         groupAbout.add_argument('--license', required=False, action='store_true', default=False, help='shows the GPLv3 license.')
-	groupAbout.add_argument('--version', action='version', version='%(prog)s 0.1', help='shows the version of the program and exists.')
+	groupAbout.add_argument('--version', action='version', version='%(prog)s 1.2.0', help='shows the version of the program and exists.')
 
 	args = parser.parse_args()	
 
@@ -290,15 +284,17 @@ if __name__ == "__main__":
 						oF.write( resultsToCSV(res) + "\n" )
 				if  "json" in args.extension:
 					with open (os.path.join(args.output_folder, "results.json"), "w") as oF:
-						oF.write( resultsToJson(res) + "\n")				
+						oF.write( resultsToJson(res) + "\n")	
+						
 			if res.keys():
+				print ""
 				print "Summing up details..."
 				for nick in res.keys():
-					print nick + ":"
-					print "\tPlatforms where the nick '" + nick + "' has been found..."
-					tags = []
-					for plat in res[nick].keys():
-						print "\t\t" + str(plat) + ":\t" + res[nick][plat]		
+					if len(res[nick].keys()) > 0:
+						print nick + ":"
+						tags = []
+						for plat in res[nick].keys():
+							print "\t" + str(plat) + ":\t" + res[nick][plat]
 
 		# Information actions...
 		elif args.info == 'list_platforms':

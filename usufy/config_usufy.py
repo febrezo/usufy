@@ -27,17 +27,25 @@ from wrappers.delicious import Delicious
 from wrappers.douban import Douban
 from wrappers.ebay import Ebay
 from wrappers.facebook import Facebook
+from wrappers.favstar import Favstar
+from wrappers.flickr import Flickr
+from wrappers.fotolog import Fotolog
 from wrappers.foursquare import Foursquare
+from wrappers.getsatisfaction import Getsatisfaction
 from wrappers.googleplus import GooglePlus
 from wrappers.github import Github
 from wrappers.hi5 import Hi5
 from wrappers.instagram import Instagram
+from wrappers.issuu import Issuu
 from wrappers.karmacracy import Karmacracy
 from wrappers.klout import Klout
+#from wrappers.linkedin import Linkedin
 from wrappers.myspace import Myspace
 from wrappers.pastebin import Pastebin
 from wrappers.pinterest import Pinterest
+from wrappers.pokerstrategy import Pokerstrategy
 from wrappers.qq import QQ
+from wrappers.ratemypoo import Ratemypoo
 from wrappers.scribd import Scribd
 from wrappers.slideshare import Slideshare
 from wrappers.tumblr import Tumblr
@@ -64,18 +72,26 @@ def getPlatforms(sites=["all"], tags=[]):
 	# Pending of solving Issue #03
 	#listAll.append(Delicious())	
 	listAll.append(Ebay())	
-	listAll.append(Facebook())	
-	listAll.append(Foursquare())	
+	listAll.append(Facebook())
+	#listAll.append(Favstar())
+	listAll.append(Flickr())
+	#listAll.append(Fotolog())
+	listAll.append(Foursquare())
+	listAll.append(Getsatisfaction())
 	listAll.append(GooglePlus())
 	listAll.append(Github())
 	listAll.append(Hi5())
 	listAll.append(Instagram())
+	listAll.append(Issuu())
 	listAll.append(Karmacracy())
 	listAll.append(Klout())
+	# listAll.append(Linkedin())
 	listAll.append(Myspace())
 	listAll.append(Pastebin())
 	listAll.append(Pinterest())
+	listAll.append(Pokerstrategy())
 	listAll.append(QQ())
+	listAll.append(Ratemypoo())
 	listAll.append(Scribd())
 	listAll.append(Slideshare())
 	listAll.append(Tumblr())

@@ -10,7 +10,7 @@ platforms when a user profile has not been found as the evidence of the existenc
 of a given profile. Its inheritance system has been designed to allow an easy development 
 of new wrappers while its multiprocessing conception shows the results fastly.
 
-The supported networks in v1.1.0 by 2014-07-07 are:
+The supported networks in v1.2.0 by 2014-07-08 are:
 - Badoo
 - Blip
 - Dailymotion
@@ -18,16 +18,21 @@ The supported networks in v1.1.0 by 2014-07-07 are:
 - Ebay
 - Facebook
 - Foursquare
+- GetSatisfaction
 - Github
 - Google Plus
 - Hi5
 - Instagram
+- Issuuu
 - Karmacracy
 - Klout
+- Linkedin
 - Myspace
 - Pastebin
 - Pinterest
+- Pokerstrategy
 - QQ
+- RateMyPoo
 - Slideshare
 - Scribd
 - Tumblr
@@ -75,9 +80,11 @@ Project structure:
     |-- ebay.py
     |-- facebook.py
     |-- foursquare.py
+    |-- getsatisfaction.py	
     |-- github.py
     |-- googleplus.py
     |-- hi5.py
+    |-- issuu.py	
     |-- __init__.py
     |-- instagram.py
     |-- karmacracy.py
@@ -87,6 +94,7 @@ Project structure:
     |-- pinterest.py
     |-- platforms.py
     |-- qq.py
+    |-- ratemypoo.py
     |-- scribd.py
     |-- slideshare.py
     |-- tumblr.py
@@ -100,14 +108,14 @@ Project structure:
 
 Installation:
 =============
-The installation under Python 2.7 for the release package Usufy-v1.1.0 is as follows:
+The installation under Python 2.7 for the release package Usufy-v1.x.x is as follows:
 ```
-tar xvfz Usufy-v1.1.0.tar.gz
+tar xvfz Usufy-v1.x.x.tar.gz
 sudo python setup.py install
 ```
 or
 ```
-unzip Usufy-v1.1.0.zip
+unzip Usufy-v1.x.x.zip
 sudo python setup.py install
 ```
 Supeuser privileges are required so as to complete the installation. Afterwards, 
@@ -119,7 +127,7 @@ If no error is displayed, the installation would have been performed correctly.
 
 Usage:
 ======
-So as to run the program, navigate to Usufy-v1.1.0/usufy and run:
+So as to run the program, navigate to Usufy-v1.x.x/usufy and run:
 ```
 python usage.py -h
 ```

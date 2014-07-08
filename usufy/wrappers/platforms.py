@@ -64,8 +64,9 @@ class Platform():
 			recurso = urllib2.urlopen(url)
 		except :
 			# no se ha conseguido retornar una URL de perfil, por lo que se devuelve None
-			# print ">\tERROR: Something happened when trying to recover the resource..."
+			#print ">\tERROR: Something happened when trying to recover the resource..."
 			return None
+		
 		html = recurso.read()
 	
 		for t in self.notFoundText:
@@ -90,6 +91,7 @@ class Platform():
 		"""
 		# generando la URL para el nick dado
 		url = self._genURL(nick)
+		
 		# en función de la respuesta, se hace la comprobación de si el perfil existe o no
 		html = self._getResourceFromUser(url) 
 		if html != None:
